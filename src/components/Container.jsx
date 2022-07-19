@@ -1,12 +1,11 @@
+import "./style.scss"
 import FormTodo from "./FormTodo"
 import TaskList from "./TaskList"
 import { useState } from "react"
 
 const Container = () => {
-
-
-
   const [ list, setList ] = useState([])
+
   const handleAddItem = (addItem) => {
     setList([...list, addItem])
   }
@@ -15,7 +14,7 @@ const Container = () => {
 
 
   return (
-    <div>
+    <div className="container">
       <FormTodo handleAddItem={handleAddItem} />
       <TaskList list={list} setList={setList} />
     </div>

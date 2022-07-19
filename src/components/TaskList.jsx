@@ -14,7 +14,6 @@ import Checkbox from './Checkbox'
       ...item,
       done: item.id === name ? checked : item.done
   }))
-  console.log(list)
   setList(updateList)
 }
 
@@ -29,10 +28,10 @@ import Checkbox from './Checkbox'
 ))
 
   return (
-    <div>
+    <div className='all-todos'>
       {list.length ? loop : "There's no task"}
-      <br />
-      <button onClick={handleDelete} disabled>Delete all done</button>
+      {list.length ? (<p><button className='button-' onClick={handleDelete}>Delete all done</button></p>) : null}
+
     </div>
   )
 }

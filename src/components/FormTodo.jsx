@@ -17,14 +17,16 @@ const FormTodo = (props) => {
   }
 
   return (
-    <div>
+    <div className="form-todo">
+      <h3>Add ToDo</h3>
       <form onSubmit={handleSubmit}>
-        <input type="text" onChange={handleInput} /* value={input} *//>
-        <button disabled={input ? "" : "disabled"}>
+        <input className="input__form" type="text" value={input} onChange={handleInput} />
+        <button className='button--' disabled={input ? "" : "disabled"}>
           Add
         </button>
       </form>
-
+      <hr className="horizon-line"/>
+      <h3>-- ToDo List --</h3>
     </div>
   )
 }
